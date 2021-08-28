@@ -4,7 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Configuration;
 
 /**
- * EnableServrBootstrap
+ * EnableSererBootstrap
  *
  * @author oubin.ob
  * @version : EnableServrBootstrap.java v 0.1 2021/8/18 23:46 oubin.ob Exp $$

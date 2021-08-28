@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class HelloWorldConfiguration {
 
     @Bean
-    public String helloWorld() {
+    public String helloWorld1() {
         return "Hello,World";
     }
 }
