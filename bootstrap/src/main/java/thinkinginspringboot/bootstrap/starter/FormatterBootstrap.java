@@ -25,7 +25,7 @@ public class FormatterBootstrap {
         Map<String, Object> data = new HashMap<>();
         data.put("name", "oubin17");
         Formatter formatter = context.getBean(Formatter.class);
-        System.out.printf("formatter.format() : %s\n", formatter.format(data));
+        System.out.printf("%s.formatter.format() : %s\n", formatter.getClass().getSimpleName(), formatter.format(data));
         context.close();
     }
 }

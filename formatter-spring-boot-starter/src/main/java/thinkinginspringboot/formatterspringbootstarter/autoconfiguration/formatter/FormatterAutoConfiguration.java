@@ -1,5 +1,7 @@
 package thinkinginspringboot.formatterspringbootstarter.autoconfiguration.formatter;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,8 +20,20 @@ public class FormatterAutoConfiguration {
      * @return {@link DefaultFormatter}
      */
     @Bean
+    @ConditionalOnMissingClass(value = "com.fasterxml.jackson.databind.ObjectMapper")
     public Formatter defaultFormatter() {
         return new DefaultFormatter();
+    }
+
+    /**
+     * Json格式 {@link JsonFormatter} Bean
+     *
+     * @return {@link JsonFormatter}
+     */
+    @Bean
+    @ConditionalOnClass(name = "com.fasterxml.jackson.databind.ObjectMapper")
+    public Formatter jsonFormatter() {
+        return new JsonFormatter();
     }
 
 }
