@@ -3,6 +3,7 @@ package thinkinginspringboot.formatterspringbootstarter.autoconfiguration.format
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnResource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,6 +15,9 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ConditionalOnProperty(prefix = "formatter", name = "enabled", havingValue = "true", matchIfMissing = true)//但配置不存在时，同样视作配置
+@ConditionalOnResource(resources = "META-INF/spring.factories")
+//@ConditionalOnNotWebApplication 非web应用下生效
+//@ConditionalOnExpression("${spring.aop.auto:true}") //少用，基本上用@ConditionalOnProperty可以替代
 public class FormatterAutoConfiguration {
 
     /**
