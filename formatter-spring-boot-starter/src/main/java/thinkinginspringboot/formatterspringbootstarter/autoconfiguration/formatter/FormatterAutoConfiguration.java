@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * @version : FormatterAutoConfiguration.java v 0.1 2021/9/4 17:59 oubin.ob Exp $$
  */
 @Configuration
-@ConditionalOnProperty(prefix = "formatter", name = "enabled", havingValue = "true")
+@ConditionalOnProperty(prefix = "formatter", name = "enabled", havingValue = "true", matchIfMissing = true)//但配置不存在时，同样视作配置
 public class FormatterAutoConfiguration {
 
     /**
