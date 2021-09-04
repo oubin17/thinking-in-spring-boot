@@ -2,6 +2,7 @@ package thinkinginspringboot.formatterspringbootstarter.autoconfiguration.format
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * @version : FormatterAutoConfiguration.java v 0.1 2021/9/4 17:59 oubin.ob Exp $$
  */
 @Configuration
+@ConditionalOnProperty(prefix = "formatter", name = "enabled", havingValue = "true")
 public class FormatterAutoConfiguration {
 
     /**

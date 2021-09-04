@@ -21,6 +21,7 @@ public class FormatterBootstrap {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = new SpringApplicationBuilder(FormatterBootstrap.class)
                 .web(WebApplicationType.NONE)
+                .properties("formatter.enabled=true")
                 .run(args);
         Map<String, Object> data = new HashMap<>();
         data.put("name", "oubin17");
