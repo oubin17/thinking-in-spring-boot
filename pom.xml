@@ -8,37 +8,24 @@
 		<version>2.5.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ob</groupId>
-	<artifactId>thinking-in-spring-boot</artifactId>
+	<groupId>thinking-in-spring-boot</groupId>
+	<artifactId>spring-boot-learning</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>thinking-in-spring-boot</name>
 	<description>Thinking In Spring Boot</description>
+
+	<packaging>pom</packaging>
+
 	<properties>
 		<java.version>1.8</java.version>
-		<skipTests>true</skipTests>
 	</properties>
+
+	<modules>
+		<module>bootstrap</module>
+	</modules>
+
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-tomcat</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jetty</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 
 	<build>
