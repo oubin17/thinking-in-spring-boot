@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.function.Predicate;
 
 /**
- * ServerImportSelector
+ * ServerImportSelector:返回BeanName，这些BeanName会被Spring扫描并注册成Bean
  *
  * @author oubin.ob
  * @version : ServerImportSelector.java v 0.1 2021/8/18 23:38 oubin.ob Exp $$

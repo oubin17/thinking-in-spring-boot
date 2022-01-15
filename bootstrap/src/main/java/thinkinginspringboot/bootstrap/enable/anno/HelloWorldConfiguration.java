@@ -9,11 +9,11 @@ import org.springframework.context.annotation.Configuration;
  * @author oubin.ob
  * @version : HelloWorldConfiguration.java v 0.1 2021/8/16 23:34 oubin.ob Exp $$
  */
-@Configuration
+//@Configuration
 public class HelloWorldConfiguration {
 
     @Bean
-    public String helloWorld1() {
+    public String enableHelloWorld() {
         return "Hello,World";
     }
 }
