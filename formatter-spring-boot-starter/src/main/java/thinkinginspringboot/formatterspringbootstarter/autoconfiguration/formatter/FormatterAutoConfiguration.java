@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
  * @version : FormatterAutoConfiguration.java v 0.1 2021/9/4 17:59 oubin.ob Exp $$
  */
 @Configuration
-@ConditionalOnProperty(prefix = "formatter", name = "enabled", havingValue = "true", matchIfMissing = true)//但配置不存在时，同样视作配置
+@ConditionalOnProperty(prefix = "formatter", name = "enabled", havingValue = "true", matchIfMissing = true)//当配置不存在时，同样视作配置
 @ConditionalOnResource(resources = "META-INF/spring.factories")
 //@ConditionalOnNotWebApplication 非web应用下生效
 //@ConditionalOnExpression("${spring.aop.auto:true}") //少用，基本上用@ConditionalOnProperty可以替代

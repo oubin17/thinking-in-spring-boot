@@ -24,9 +24,6 @@ public class EnableHelloWorldBootstrap {
         String helloWorld = context.getBean("enableHelloWorld", String.class);
         System.out.println("HelloWorld = " + helloWorld);
 
-//        String helloWorldCompare = context.getBean("enableHelloWorldCompare", String.class);
-//        System.out.println("HelloWorldCompare = " + helloWorldCompare);
-
         context.close();
     }
 }
