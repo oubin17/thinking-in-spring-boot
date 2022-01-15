@@ -7,6 +7,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.function.RouterFunction;
 import org.springframework.web.servlet.function.ServerResponse;
+import thinkinginspringboot.bootstrap.annotation.NameRepository;
 
 import static org.springframework.web.servlet.function.RequestPredicates.GET;
 import static org.springframework.web.servlet.function.RouterFunctions.route;
@@ -20,7 +21,16 @@ public class BootstrapApplication {
 				.bannerMode(Banner.Mode.CONSOLE)
 				.run(args);
 
+	}
 
+	/**
+	 * 验证@Component注解的派生性
+	 *
+	 * @param context
+	 */
+	public static void stereotypeAnnotation(ConfigurableApplicationContext context) {
+		NameRepository nameRepository = (NameRepository) context.getBean("nameRepository");
+		System.out.println(nameRepository.findAll());
 	}
 
 	@Bean
